@@ -1,0 +1,1605 @@
+﻿cohort_id,concept_set_id,concept_set_sql,concept_set_name,concept_set_expression
+135,44,"SELECT 44 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4296653)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4296653)
+  and c.invalid_reason is null
+
+) I
+) C",[OHDSI STEMI] STEMI ICD concept set,"[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                  4296653,
+""CONCEPT_NAME"": ""Acute ST segment elevation myocardial infarction"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""401303003"",
+""DOMAIN_ID"": ""Condition"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"
+144,44,"SELECT 44 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4296653)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4296653)
+  and c.invalid_reason is null
+
+) I
+) C",[OHDSI STEMI] STEMI ICD concept set,"[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                  4296653,
+""CONCEPT_NAME"": ""Acute ST segment elevation myocardial infarction"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""401303003"",
+""DOMAIN_ID"": ""Condition"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"
+135,45,"SELECT 45 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4270024,36712982,37395582)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4270024,36712982,37395582)
+  and c.invalid_reason is null
+
+) I
+) C",[OHDSI STEMI] non-STEMI ICD concept set,"[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                  4270024,
+""CONCEPT_NAME"": ""Acute non-ST segment elevation myocardial infarction"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""401314000"",
+""DOMAIN_ID"": ""Condition"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 36712982,
+""CONCEPT_NAME"": ""Unstable angina co-occurrent and due to coronary arteriosclerosis"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""15960061000119102"",
+""DOMAIN_ID"": ""Condition"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 37395582,
+""CONCEPT_NAME"": ""History of acute ST segment elevation myocardial infarction"",
+""STANDARD_CONCEPT"": ""N"",
+""STANDARD_CONCEPT_CAPTION"": ""Non-Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""285721000119104"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Context-dependent"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"
+144,45,"SELECT 45 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4270024,36712982,37395582)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4270024,36712982,37395582)
+  and c.invalid_reason is null
+
+) I
+) C",[OHDSI STEMI] non-STEMI ICD concept set,"[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                  4270024,
+""CONCEPT_NAME"": ""Acute non-ST segment elevation myocardial infarction"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""401314000"",
+""DOMAIN_ID"": ""Condition"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 36712982,
+""CONCEPT_NAME"": ""Unstable angina co-occurrent and due to coronary arteriosclerosis"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""15960061000119102"",
+""DOMAIN_ID"": ""Condition"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 37395582,
+""CONCEPT_NAME"": ""History of acute ST segment elevation myocardial infarction"",
+""STANDARD_CONCEPT"": ""N"",
+""STANDARD_CONCEPT_CAPTION"": ""Non-Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""285721000119104"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Context-dependent"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"
+135,46,"SELECT 46 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (43533223,43533242,43533187,4184832,4283892,43528003,45770937,4216130,2001500,4131681,2001504,43533186,43533354,45767945,4337739,45758194,2001501)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (43533223,43533242,43533187,4184832,4283892,43528003,45770937,4216130,2001500,4131681,2001504,43533186,43533354,45767945,4337739,45758194,2001501)
+  and c.invalid_reason is null
+
+) I
+) C",[OHDSI STEMI] PCI with or without stent,"[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                 43533223,
+""CONCEPT_NAME"": ""Percutaneous transluminal revascularization of or through coronary artery bypass graft (internal mammary, free arterial, venous), any combination of drug-eluting intracoronary stent, atherectomy and angioplasty, including distal protection when perform..."",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""C9605"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""HCPCS"",
+""CONCEPT_CLASS_ID"": ""HCPCS"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 43533242,
+""CONCEPT_NAME"": ""Percutaneous transluminal revascularization of chronic total occlusion, coronary artery, coronary artery branch, or coronary artery bypass graft, any combination of drug-eluting intracoronary stent, atherectomy and angioplasty; each additional coronary..."",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""C9608"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""HCPCS"",
+""CONCEPT_CLASS_ID"": ""HCPCS"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 43533187,
+""CONCEPT_NAME"": ""Percutaneous transluminal revascularization of acute total/subtotal occlusion during acute myocardial infarction, coronary artery or coronary artery bypass graft, any combination of drug-eluting intracoronary stent, atherectomy and angioplasty, includi..."",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""C9606"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""HCPCS"",
+""CONCEPT_CLASS_ID"": ""HCPCS"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4184832,
+""CONCEPT_NAME"": ""Coronary angioplasty"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""41339005"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4283892,
+""CONCEPT_NAME"": ""Placement of stent in coronary artery"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""36969009"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 43528003,
+""CONCEPT_NAME"": ""Percutaneous transluminal revascularization of chronic total occlusion, coronary artery, coronary artery branch, or coronary artery bypass graft, any combination of intracoronary stent, atherectomy and angioplasty; single vessel"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""92943"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 45770937,
+""CONCEPT_NAME"": ""Coronary angioplasty catheter"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""705928000"",
+""DOMAIN_ID"": ""Device"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Physical Object"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4216130,
+""CONCEPT_NAME"": ""Percutaneous coronary intervention"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""415070008"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  2001500,
+""CONCEPT_NAME"": ""Single vessel percutaneous transluminal coronary angioplasty [PTCA] or coronary atherectomy without mention of thrombolytic agent"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""36.01"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""ICD9Proc"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4131681,
+""CONCEPT_NAME"": ""Drug eluting stent"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""411191007"",
+""DOMAIN_ID"": ""Device"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Pharma/Biol Product"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  2001504,
+""CONCEPT_NAME"": ""Multiple vessel percutaneous transluminal coronary angioplasty [PTCA] or coronary atherectomy performed during the same operation, with or without mention of thrombolytic agent"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""36.05"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""ICD9Proc"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 43533186,
+""CONCEPT_NAME"": ""Percutaneous transluminal revascularization of or through coronary artery bypass graft (internal mammary, free arterial, venous), any combination of drug-eluting intracoronary stent, atherectomy and angioplasty, including distal protection when perform..."",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""C9604"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""HCPCS"",
+""CONCEPT_CLASS_ID"": ""HCPCS"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 43533354,
+""CONCEPT_NAME"": ""Percutaneous transluminal revascularization of chronic total occlusion, coronary artery, coronary artery branch, or coronary artery bypass graft, any combination of drug-eluting intracoronary stent, atherectomy and angioplasty; single vessel"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""C9607"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""HCPCS"",
+""CONCEPT_CLASS_ID"": ""HCPCS"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 45767945,
+""CONCEPT_NAME"": ""Coronary artery stent"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""705643001"",
+""DOMAIN_ID"": ""Device"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Physical Object"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4337739,
+""CONCEPT_NAME"": ""Percutaneous directional coronary atherectomy"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""232727003"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 45758194,
+""CONCEPT_NAME"": ""Radio-frequency coronary angioplasty system"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""462755008"",
+""DOMAIN_ID"": ""Device"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Physical Object"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  2001501,
+""CONCEPT_NAME"": ""Single vessel percutaneous transluminal coronary angioplasty [PTCA] or coronary atherectomy with mention of thrombolytic agent"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""36.02"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""ICD9Proc"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"
+144,46,"SELECT 46 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (43533223,43533242,43533187,4184832,4283892,43528003,45770937,4216130,2001500,4131681,2001504,43533186,43533354,45767945,4337739,45758194,2001501)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (43533223,43533242,43533187,4184832,4283892,43528003,45770937,4216130,2001500,4131681,2001504,43533186,43533354,45767945,4337739,45758194,2001501)
+  and c.invalid_reason is null
+
+) I
+) C",[OHDSI STEMI] PCI with or without stent,"[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                 43533223,
+""CONCEPT_NAME"": ""Percutaneous transluminal revascularization of or through coronary artery bypass graft (internal mammary, free arterial, venous), any combination of drug-eluting intracoronary stent, atherectomy and angioplasty, including distal protection when perform..."",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""C9605"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""HCPCS"",
+""CONCEPT_CLASS_ID"": ""HCPCS"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 43533242,
+""CONCEPT_NAME"": ""Percutaneous transluminal revascularization of chronic total occlusion, coronary artery, coronary artery branch, or coronary artery bypass graft, any combination of drug-eluting intracoronary stent, atherectomy and angioplasty; each additional coronary..."",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""C9608"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""HCPCS"",
+""CONCEPT_CLASS_ID"": ""HCPCS"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 43533187,
+""CONCEPT_NAME"": ""Percutaneous transluminal revascularization of acute total/subtotal occlusion during acute myocardial infarction, coronary artery or coronary artery bypass graft, any combination of drug-eluting intracoronary stent, atherectomy and angioplasty, includi..."",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""C9606"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""HCPCS"",
+""CONCEPT_CLASS_ID"": ""HCPCS"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4184832,
+""CONCEPT_NAME"": ""Coronary angioplasty"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""41339005"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4283892,
+""CONCEPT_NAME"": ""Placement of stent in coronary artery"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""36969009"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 43528003,
+""CONCEPT_NAME"": ""Percutaneous transluminal revascularization of chronic total occlusion, coronary artery, coronary artery branch, or coronary artery bypass graft, any combination of intracoronary stent, atherectomy and angioplasty; single vessel"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""92943"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 45770937,
+""CONCEPT_NAME"": ""Coronary angioplasty catheter"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""705928000"",
+""DOMAIN_ID"": ""Device"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Physical Object"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4216130,
+""CONCEPT_NAME"": ""Percutaneous coronary intervention"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""415070008"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  2001500,
+""CONCEPT_NAME"": ""Single vessel percutaneous transluminal coronary angioplasty [PTCA] or coronary atherectomy without mention of thrombolytic agent"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""36.01"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""ICD9Proc"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4131681,
+""CONCEPT_NAME"": ""Drug eluting stent"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""411191007"",
+""DOMAIN_ID"": ""Device"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Pharma/Biol Product"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  2001504,
+""CONCEPT_NAME"": ""Multiple vessel percutaneous transluminal coronary angioplasty [PTCA] or coronary atherectomy performed during the same operation, with or without mention of thrombolytic agent"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""36.05"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""ICD9Proc"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 43533186,
+""CONCEPT_NAME"": ""Percutaneous transluminal revascularization of or through coronary artery bypass graft (internal mammary, free arterial, venous), any combination of drug-eluting intracoronary stent, atherectomy and angioplasty, including distal protection when perform..."",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""C9604"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""HCPCS"",
+""CONCEPT_CLASS_ID"": ""HCPCS"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 43533354,
+""CONCEPT_NAME"": ""Percutaneous transluminal revascularization of chronic total occlusion, coronary artery, coronary artery branch, or coronary artery bypass graft, any combination of drug-eluting intracoronary stent, atherectomy and angioplasty; single vessel"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""C9607"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""HCPCS"",
+""CONCEPT_CLASS_ID"": ""HCPCS"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 45767945,
+""CONCEPT_NAME"": ""Coronary artery stent"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""705643001"",
+""DOMAIN_ID"": ""Device"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Physical Object"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4337739,
+""CONCEPT_NAME"": ""Percutaneous directional coronary atherectomy"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""232727003"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 45758194,
+""CONCEPT_NAME"": ""Radio-frequency coronary angioplasty system"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""462755008"",
+""DOMAIN_ID"": ""Device"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Physical Object"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  2001501,
+""CONCEPT_NAME"": ""Single vessel percutaneous transluminal coronary angioplasty [PTCA] or coronary atherectomy with mention of thrombolytic agent"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""36.02"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""ICD9Proc"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"
+135,47,"SELECT 47 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (262,9201,8717,8920,38004311)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (262,9201,8717,8920,38004311)
+  and c.invalid_reason is null
+
+) I
+LEFT JOIN
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4203130,8971)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4203130,8971)
+  and c.invalid_reason is null
+
+) E ON I.concept_id = E.concept_id
+WHERE E.concept_id is null
+) C",Inpatient visitv2,"[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                      262,
+""CONCEPT_NAME"": ""Emergency Room and Inpatient Visit"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""ERIP"",
+""DOMAIN_ID"": ""Visit"",
+""VOCABULARY_ID"": ""Visit"",
+""CONCEPT_CLASS_ID"": ""Visit"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                     9201,
+""CONCEPT_NAME"": ""Inpatient Visit"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""IP"",
+""DOMAIN_ID"": ""Visit"",
+""VOCABULARY_ID"": ""Visit"",
+""CONCEPT_CLASS_ID"": ""Visit"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4203130,
+""CONCEPT_NAME"": ""Discharge from hospital"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""308283009"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": true,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                     8717,
+""CONCEPT_NAME"": ""Inpatient Hospital"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""21"",
+""DOMAIN_ID"": ""Visit"",
+""VOCABULARY_ID"": ""CMS Place of Service"",
+""CONCEPT_CLASS_ID"": ""Visit"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                     8971,
+""CONCEPT_NAME"": ""Inpatient Psychiatric Facility"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""51"",
+""DOMAIN_ID"": ""Visit"",
+""VOCABULARY_ID"": ""CMS Place of Service"",
+""CONCEPT_CLASS_ID"": ""Visit"" 
+},
+""isExcluded"": true,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                     8920,
+""CONCEPT_NAME"": ""Comprehensive Inpatient Rehabilitation Facility"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""61"",
+""DOMAIN_ID"": ""Visit"",
+""VOCABULARY_ID"": ""CMS Place of Service"",
+""CONCEPT_CLASS_ID"": ""Visit"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 38004311,
+""CONCEPT_NAME"": ""Inpatient Hospice"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""315D00000X"",
+""DOMAIN_ID"": ""Visit"",
+""VOCABULARY_ID"": ""NUCC"",
+""CONCEPT_CLASS_ID"": ""Visit"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"
+144,47,"SELECT 47 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (262,9201,8717,8920,38004311)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (262,9201,8717,8920,38004311)
+  and c.invalid_reason is null
+
+) I
+LEFT JOIN
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4203130,8971)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4203130,8971)
+  and c.invalid_reason is null
+
+) E ON I.concept_id = E.concept_id
+WHERE E.concept_id is null
+) C",[BI Empa] Inpatient visitv2,"[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                      262,
+""CONCEPT_NAME"": ""Emergency Room and Inpatient Visit"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""ERIP"",
+""DOMAIN_ID"": ""Visit"",
+""VOCABULARY_ID"": ""Visit"",
+""CONCEPT_CLASS_ID"": ""Visit"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                     9201,
+""CONCEPT_NAME"": ""Inpatient Visit"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""IP"",
+""DOMAIN_ID"": ""Visit"",
+""VOCABULARY_ID"": ""Visit"",
+""CONCEPT_CLASS_ID"": ""Visit"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4203130,
+""CONCEPT_NAME"": ""Discharge from hospital"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""308283009"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": true,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                     8717,
+""CONCEPT_NAME"": ""Inpatient Hospital"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""21"",
+""DOMAIN_ID"": ""Visit"",
+""VOCABULARY_ID"": ""CMS Place of Service"",
+""CONCEPT_CLASS_ID"": ""Visit"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                     8971,
+""CONCEPT_NAME"": ""Inpatient Psychiatric Facility"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""51"",
+""DOMAIN_ID"": ""Visit"",
+""VOCABULARY_ID"": ""CMS Place of Service"",
+""CONCEPT_CLASS_ID"": ""Visit"" 
+},
+""isExcluded"": true,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                     8920,
+""CONCEPT_NAME"": ""Comprehensive Inpatient Rehabilitation Facility"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""61"",
+""DOMAIN_ID"": ""Visit"",
+""VOCABULARY_ID"": ""CMS Place of Service"",
+""CONCEPT_CLASS_ID"": ""Visit"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 38004311,
+""CONCEPT_NAME"": ""Inpatient Hospice"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""315D00000X"",
+""DOMAIN_ID"": ""Visit"",
+""VOCABULARY_ID"": ""NUCC"",
+""CONCEPT_CLASS_ID"": ""Visit"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"
+135,48,"SELECT 48 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4059699,759555,709890,4292071,710016,4230911,2313880,2313879,4060628,4305721,2313881,4252226,45773079,42628042,4222104)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4059699,759555,709890,4292071,710016,4230911,2313880,2313879,4060628,4305721,2313881,4252226,45773079,42628042,4222104)
+  and c.invalid_reason is null
+
+) I
+) C",[OHDSI STEMI] Echocardiogram,"[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                  4059699,
+""CONCEPT_NAME"": ""Echocardiogram abnormal"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""169241000"",
+""DOMAIN_ID"": ""Condition"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                   759555,
+""CONCEPT_NAME"": ""Percutaneous transcatheter implantation of interatrial septal shunt device, including right and left heart catheterization, intracardiac echocardiography, and imaging guidance by the proceduralist, when performed"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""0613T"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                   709890,
+""CONCEPT_NAME"": ""Transapical mitral valve repair, including transthoracic echocardiography, when performed, with placement of artificial chordae tendineae"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""0543T"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4292071,
+""CONCEPT_NAME"": ""Echocardiogram requested"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""401000009"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Context-dependent"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                   710016,
+""CONCEPT_NAME"": ""Myocardial strain imaging using speckle tracking-derived assessment of myocardial mechanics (List separately in addition to codes for echocardiography imaging)"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""93356"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4230911,
+""CONCEPT_NAME"": ""Echocardiography"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""40701008"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  2313880,
+""CONCEPT_NAME"": ""Doppler echocardiography, pulsed wave and/or continuous wave with spectral display (List separately in addition to codes for echocardiographic imaging); follow-up or limited study (List separately in addition to codes for echocardiographic imaging)"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""93321"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  2313879,
+""CONCEPT_NAME"": ""Doppler echocardiography, pulsed wave and/or continuous wave with spectral display (List separately in addition to codes for echocardiographic imaging); complete"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""93320"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4060628,
+""CONCEPT_NAME"": ""Echocardiogram normal"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""169240004"",
+""DOMAIN_ID"": ""Condition"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4305721,
+""CONCEPT_NAME"": ""Referral for echocardiography"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""390791001"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  2313881,
+""CONCEPT_NAME"": ""Doppler echocardiography color flow velocity mapping (List separately in addition to codes for echocardiography)"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""93325"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4252226,
+""CONCEPT_NAME"": ""Echocardiogram equivocal"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""408380008"",
+""DOMAIN_ID"": ""Condition"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 45773079,
+""CONCEPT_NAME"": ""Stress echocardiography using dobutamine"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""703338002"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 42628042,
+""CONCEPT_NAME"": ""Myocardial contrast perfusion echocardiography, at rest or with stress, for assessment of myocardial ischemia or viability (List separately in addition to code for primary procedure)"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""0439T"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4222104,
+""CONCEPT_NAME"": ""Ultrasonographic echogenicity"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""421222001"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Observable Entity"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"
+144,48,"SELECT 48 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4059699,759555,709890,4292071,710016,4230911,2313880,2313879,4060628,4305721,2313881,4252226,45773079,42628042,4222104)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4059699,759555,709890,4292071,710016,4230911,2313880,2313879,4060628,4305721,2313881,4252226,45773079,42628042,4222104)
+  and c.invalid_reason is null
+
+) I
+) C",[OHDSI STEMI] Echocardiogram,"[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                  4059699,
+""CONCEPT_NAME"": ""Echocardiogram abnormal"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""169241000"",
+""DOMAIN_ID"": ""Condition"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                   759555,
+""CONCEPT_NAME"": ""Percutaneous transcatheter implantation of interatrial septal shunt device, including right and left heart catheterization, intracardiac echocardiography, and imaging guidance by the proceduralist, when performed"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""0613T"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                   709890,
+""CONCEPT_NAME"": ""Transapical mitral valve repair, including transthoracic echocardiography, when performed, with placement of artificial chordae tendineae"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""0543T"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4292071,
+""CONCEPT_NAME"": ""Echocardiogram requested"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""401000009"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Context-dependent"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                   710016,
+""CONCEPT_NAME"": ""Myocardial strain imaging using speckle tracking-derived assessment of myocardial mechanics (List separately in addition to codes for echocardiography imaging)"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""93356"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4230911,
+""CONCEPT_NAME"": ""Echocardiography"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""40701008"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  2313880,
+""CONCEPT_NAME"": ""Doppler echocardiography, pulsed wave and/or continuous wave with spectral display (List separately in addition to codes for echocardiographic imaging); follow-up or limited study (List separately in addition to codes for echocardiographic imaging)"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""93321"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  2313879,
+""CONCEPT_NAME"": ""Doppler echocardiography, pulsed wave and/or continuous wave with spectral display (List separately in addition to codes for echocardiographic imaging); complete"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""93320"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4060628,
+""CONCEPT_NAME"": ""Echocardiogram normal"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""169240004"",
+""DOMAIN_ID"": ""Condition"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4305721,
+""CONCEPT_NAME"": ""Referral for echocardiography"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""390791001"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  2313881,
+""CONCEPT_NAME"": ""Doppler echocardiography color flow velocity mapping (List separately in addition to codes for echocardiography)"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""93325"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4252226,
+""CONCEPT_NAME"": ""Echocardiogram equivocal"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""408380008"",
+""DOMAIN_ID"": ""Condition"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 45773079,
+""CONCEPT_NAME"": ""Stress echocardiography using dobutamine"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""703338002"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Procedure"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 42628042,
+""CONCEPT_NAME"": ""Myocardial contrast perfusion echocardiography, at rest or with stress, for assessment of myocardial ischemia or viability (List separately in addition to code for primary procedure)"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""0439T"",
+""DOMAIN_ID"": ""Procedure"",
+""VOCABULARY_ID"": ""CPT4"",
+""CONCEPT_CLASS_ID"": ""CPT4"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4222104,
+""CONCEPT_NAME"": ""Ultrasonographic echogenicity"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""421222001"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Observable Entity"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"

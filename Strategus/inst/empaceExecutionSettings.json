@@ -1,0 +1,22 @@
+{
+  "connectionDetailsReference": "OPEN_CLAIMS",
+  "workDatabaseSchema": "PA_USA_OPENCLAIMS.STUDY_REFERENCE",
+  "cdmDatabaseSchema": "EXT_OMOPV5_USA_OPENCLAIMS.FULL_M202311_OMOP_V5",
+  "cohortTableNames": {
+    "cohortTable": "STEMI_v2",
+    "cohortInclusionTable": "STEMI_v2_inclusion",
+    "cohortInclusionResultTable": "STEMI_v2_inclusion_result",
+    "cohortInclusionStatsTable": "STEMI_v2_inclusion_stats",
+    "cohortSummaryStatsTable": "STEMI_v2_summary_stats",
+    "cohortCensorStatsTable": "STEMI_v2_censor_stats"
+  },
+  "tempEmulationSchema": "PA_USA_OPENCLAIMS.STUDY_REFERENCE",
+  "workFolder": "/home/mbrand2/PhenoPheb_STEMI_Characterization_new/Strategus/output/work_folder",
+  "resultsFolder": "/home/mbrand2/PhenoPheb_STEMI_Characterization_new/Strategus/output/results_folder",
+  "minCellCount": 5,
+  "integerAsNumeric": true,
+  "integer64AsNumeric": true,
+  "resultsConnectionDetailsReference": null,
+  "resultsDatabaseSchema": "PA_USA_OPENCLAIMS.STUDY_REFERENCE",
+  "attr_class": ["CdmExecutionSettings", "ExecutionSettings"]
+}

@@ -1,0 +1,31 @@
+2024-02-06 09:19:23	[Main thread]	INFO			Validating inputs
+2024-02-06 09:19:25	[Main thread]	INFO			Executing
+2024-02-06 09:19:25	[Main thread]	INFO	DatabaseConnector	connectSnowflake	Connecting using Snowflake driver
+2024-02-06 09:19:31	[Main thread]	INFO	CohortGenerator	createCohortTables	Table "STEMI" already exists and in incremental mode, so not recreating it.
+2024-02-06 09:19:31	[Main thread]	INFO	CohortGenerator	createCohortTables	Table "STEMI_inclusion" already exists and in incremental mode, so not recreating it.
+2024-02-06 09:19:31	[Main thread]	INFO	CohortGenerator	createCohortTables	Table "STEMI_inclusion_result" already exists and in incremental mode, so not recreating it.
+2024-02-06 09:19:31	[Main thread]	INFO	CohortGenerator	createCohortTables	Table "STEMI_inclusion_stats" already exists and in incremental mode, so not recreating it.
+2024-02-06 09:19:31	[Main thread]	INFO	CohortGenerator	createCohortTables	Table "STEMI_summary_stats" already exists and in incremental mode, so not recreating it.
+2024-02-06 09:19:31	[Main thread]	INFO	CohortGenerator	createCohortTables	Table "STEMI_censor_stats" already exists and in incremental mode, so not recreating it.
+2024-02-06 09:19:37	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2024-02-06 09:19:37	[Main thread]	INFO	CohortGenerator	FUN	1/2- Generating cohort: [OHDSI PhenotypePhebruary] STEMI - def.4 diagSTEMI (with inclusion and exclusion criteria)
+2024-02-06 09:23:29	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 3.86 mins
+2024-02-06 09:23:29	[Main thread]	INFO	CohortGenerator	FUN	2/2- Generating cohort: [OHDSI PhenotypePhebruary] STEMI - def.5 diagSTEMI (primary) (with inclusion and exclusion criteria)
+2024-02-06 09:26:57	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 3.47 mins
+2024-02-06 09:26:57	[Main thread]	INFO			Export data
+2024-02-06 09:27:05	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 7.65 secs
+2024-02-06 09:27:09	[Main thread]	INFO	CohortGenerator	insertInclusionRuleNames	Inserting inclusion rule names
+2024-02-06 09:27:11	[Main thread]	INFO	DatabaseConnector	insertTable.default	Inserting data took 1.45 secs
+2024-02-06 09:27:11	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from STEMI_inclusion
+2024-02-06 09:27:12	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /home/mbrand2/PhenoPheb_STEMI_Characterization_new/Strategus/output/results_folder/CohortGeneratorModule_1/cohort_inclusion.csv
+2024-02-06 09:27:12	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from STEMI_inclusion_result
+2024-02-06 09:27:12	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /home/mbrand2/PhenoPheb_STEMI_Characterization_new/Strategus/output/results_folder/CohortGeneratorModule_1/cohort_inc_result.csv
+2024-02-06 09:27:12	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from STEMI_inclusion_stats
+2024-02-06 09:27:13	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /home/mbrand2/PhenoPheb_STEMI_Characterization_new/Strategus/output/results_folder/CohortGeneratorModule_1/cohort_inc_stats.csv
+2024-02-06 09:27:13	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from STEMI_summary_stats
+2024-02-06 09:27:13	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /home/mbrand2/PhenoPheb_STEMI_Characterization_new/Strategus/output/results_folder/CohortGeneratorModule_1/cohort_summary_stats.csv
+2024-02-06 09:27:13	[Main thread]	INFO	CohortGenerator	getStatsTable	- Fetching data from STEMI_censor_stats
+2024-02-06 09:27:14	[Main thread]	INFO	CohortGenerator	exportStats	- Saving data to - /home/mbrand2/PhenoPheb_STEMI_Characterization_new/Strategus/output/results_folder/CohortGeneratorModule_1/cohort_censor_stats.csv
+2024-02-06 09:27:14	[Main thread]	WARN			cannot rename file '/home/mbrand2/PhenoPheb_STEMI_Characterization_new/Strategus/output/results_folder/CohortGeneratorModule_1/cohort_censor_stats.csv' to '/home/mbrand2/PhenoPheb_STEMI_Characterization_new/Strategus/output/results_folder/CohortGeneratorModule_1/cg_cohort_censor_stats.csv', reason 'No such file or directory'
+2024-02-06 09:27:14	[Main thread]	WARN			cannot rename file '/home/mbrand2/PhenoPheb_STEMI_Characterization_new/Strategus/output/results_folder/CohortGeneratorModule_1/cohort_count_neg_ctrl.csv' to '/home/mbrand2/PhenoPheb_STEMI_Characterization_new/Strategus/output/results_folder/CohortGeneratorModule_1/cg_cohort_count_neg_ctrl.csv', reason 'No such file or directory'
+2024-02-06 09:27:14	[Main thread]	INFO			Results available at: /home/mbrand2/PhenoPheb_STEMI_Characterization_new/Strategus/output/results_folder/CohortGeneratorModule_1/cohortGeneratorResults.zip
