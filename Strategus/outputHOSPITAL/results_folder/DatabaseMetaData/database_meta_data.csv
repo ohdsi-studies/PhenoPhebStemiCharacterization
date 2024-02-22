@@ -1,2 +1,0 @@
-cdm_source_name,cdm_source_abbreviation,cdm_holder,source_description,source_documentation_reference,cdm_etl_reference,source_release_date,cdm_release_date,cdm_version,vocabulary_version,cdm_version_concept_id,database_id,max_obs_period_end_date
-FULL_202306_SOURCE_DATA,HOSP202306SRC,IQVIA,NotAv,NotAv,https://github.com/OHDSI/CommonDataModel/releases/tag/v5.3.1,2023-06-30,2023-07-30,v5.3.1,v5.0 31-MAY-23,1147638,-520511347,2023-06-30
