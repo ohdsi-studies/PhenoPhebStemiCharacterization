@@ -11,8 +11,8 @@
     "cohortCensorStatsTable": "STEMI_v2_censor_stats"
   },
   "tempEmulationSchema": "PA_USA_OPENCLAIMS.STUDY_REFERENCE",
-  "workFolder": "/home/mbrand2/PhenoPheb_STEMI_Characterization_new/Strategus/output/work_folder",
-  "resultsFolder": "/home/mbrand2/PhenoPheb_STEMI_Characterization_new/Strategus/output/results_folder",
+  "workFolder": "/home/INTERNAL.IMSGLOBAL.COM/u1125754/PhenoPhebStemiCharacterization/Strategus/output/work_folder",
+  "resultsFolder": "/home/INTERNAL.IMSGLOBAL.COM/u1125754/PhenoPhebStemiCharacterization/Strategus/output/results_folder",
   "minCellCount": 5,
   "integerAsNumeric": true,
   "integer64AsNumeric": true,

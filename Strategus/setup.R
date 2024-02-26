@@ -53,7 +53,7 @@ cohortDefinitionSet <- getCohortDefinitionSet(
 #The following code downloads the settings functions from the `CohortGeneratorModule` which then activates some additional functions we can use for creating the analysis specification. 
 #In the analysis specification, we will add the cohort definitions and negative control outcomes to the `sharedResources` section since these elements may be used by any of the HADES modules. 
 #To do this, we will use the `createCohortSharedResourceSpecifications` and `createNegativeControlOutcomeCohortSharedResourceSpecifications` functions respectively. In addition, we will use the  `cohortGeneratorModuleSpecifications` function to specify the cohort generation settings.
-source("https://raw.githubusercontent.com/OHDSI/CohortGeneratorModule/v0.3.0/SettingsFunctions.R")
+source("https://raw.githubusercontent.com/OHDSI/CohortGeneratorModule/v0.2.0/SettingsFunctions.R")
 
 # Create the cohort definition shared resource element for the analysis specification
 cohortDefinitionShared <- createCohortSharedResourceSpecifications(cohortDefinitionSet)
@@ -66,7 +66,7 @@ cohortGeneratorModuleSpecifications <- createCohortGeneratorModuleSpecifications
 
 ## CohortDiagnostics Module Settings
 #The following code creates the `cohortDiagnosticsModuleSpecifications` to run cohort diagnostics on the cohorts in the study.
-source("https://raw.githubusercontent.com/OHDSI/CohortDiagnosticsModule/v0.2.0/SettingsFunctions.R")
+source("https://raw.githubusercontent.com/OHDSI/CohortDiagnosticsModule/v0.1.0/SettingsFunctions.R")
 library(CohortDiagnostics)
 cohortDiagnosticsModuleSpecifications <- createCohortDiagnosticsModuleSpecifications(
   runInclusionStatistics = TRUE,

@@ -175,17 +175,10 @@ if (knitr::is_latex_output()) {
 ```{r dates, echo=FALSE}
 dates <- readr::read_delim(show_col_types = FALSE,col_names = TRUE, delim = ";", trim_ws = TRUE, file = "
   Milestone; Planned / actual date
-  Identify data partners; October 2023
-  Data partners to share data diagnostics results; October 2023
-  Complete candidate phenotypes; October 2023
-  Data partners to share phenotype diagnostics results; November 2023
-  Finalize analytic package; November 2023
-  Data partners to run analytic package; November 2023
-  Data partners to share study diagnostic results; November 2023
-  Finalize results from data partners; December 2023
-  Manuscript drafting and writing; early 2024
-  Submit abstract: ICPE (February 2024), OHDSI EU Symposium; early 2024
-
+  Identify data partners; March 2024
+  Data partners to run analytics package results; April-May 2024
+  Finalize results from data partners; May 2024
+  Manuscript drafting and writing; mid 2024
 ")
 
 tab <- kable(dates, booktabs = TRUE, linesep = "")

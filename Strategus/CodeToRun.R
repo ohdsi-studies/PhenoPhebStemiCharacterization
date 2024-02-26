@@ -18,14 +18,15 @@ outputFolder <- file.path(paste0(getwd(),"/Strategus/output"))
 
 # If first time using strategus execution, these variables are essential
 Sys.setenv(INSTANTIATED_MODULES_FOLDER="~/StrategusModulesHome") # directory for Strategus modules to be installed
-Sys.setenv(STRATEGUS_KEYRING_PASSWORD="empace")                  # Password for keyring used to store details, if already set do not re-set
+Sys.setenv(STRATEGUS_KEYRING_PASSWORD="Strategus")                  # Password for keyring used to store details, if already set do not re-set
   
 # Create connection details in usual manner
 connectionDetails <- DatabaseConnector::createConnectionDetails(
   "snowflake",
   user = Sys.getenv("NW_SNOWFLAKE_USER"),
   password = Sys.getenv("NW_SNOWFLAKE_PASSWORD"),
-  connectionString = paste0(Sys.getenv("OMOP_PA_SERVER"), Sys.getenv("MEDIUM_USA_OPENCLAIMS"),"&CLIENT_SESSION_KEEP_ALIVE=true")
+  connectionString = paste0(Sys.getenv("OMOP_PA_SERVER"), Sys.getenv("MEDIUM_USA_OPENCLAIMS"),"&CLIENT_SESSION_KEEP_ALIVE=true"),
+  pathToDriver = "/home/INTERNAL.IMSGLOBAL.COM/u1125754/drivers"
   )
 
 #######################

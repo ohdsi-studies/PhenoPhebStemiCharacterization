@@ -19,7 +19,7 @@
   "moduleSpecifications": [
     {
       "module": "CohortGeneratorModule",
-      "version": "0.3.0",
+      "version": "0.2.0",
       "remoteRepo": "github.com",
       "remoteUsername": "ohdsi",
       "settings": {
@@ -30,7 +30,7 @@
     },
     {
       "module": "CohortDiagnosticsModule",
-      "version": "0.2.0",
+      "version": "0.1.0",
       "remoteRepo": "github.com",
       "remoteUsername": "ohdsi",
       "settings": {
