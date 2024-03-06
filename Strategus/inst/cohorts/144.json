@@ -49,18 +49,6 @@
 							"CONCEPT_CLASS_ID" : null
 						},
 						{
-							"CONCEPT_ID" : 32904,
-							"CONCEPT_NAME" : "Primary referral diagnosis",
-							"STANDARD_CONCEPT" : null,
-							"STANDARD_CONCEPT_CAPTION" : "Unknown",
-							"INVALID_REASON" : null,
-							"INVALID_REASON_CAPTION" : "Unknown",
-							"CONCEPT_CODE" : "OMOP4976974",
-							"DOMAIN_ID" : "Condition Status",
-							"VOCABULARY_ID" : "Condition Status",
-							"CONCEPT_CLASS_ID" : null
-						},
-						{
 							"CONCEPT_ID" : 2016481907,
 							"CONCEPT_NAME" : "PRIMARY DIAGNOSIS OF",
 							"STANDARD_CONCEPT" : null,
@@ -77,7 +65,7 @@
 			}
 		],
 		"ObservationWindow" : {
-			"PriorDays" : 0,
+			"PriorDays" : 365,
 			"PostDays" : 0
 		},
 		"PrimaryCriteriaLimit" : {
@@ -117,8 +105,8 @@
 			{
 				"Criteria" : {
 					"Observation" : {
-						"CodesetId" : 45,
-						"ObservationTypeExclude" : false
+						"ObservationTypeExclude" : false,
+						"ObservationSourceConcept" : 45
 					}
 				},
 				"StartWindow" : {
@@ -941,42 +929,15 @@
 			}
 		},
 		{
-			"name" : "catherization +/- stent placement at day 0 (same visit)",
+			"name" : "inpatient visit at day 0 (same visit)",
 			"expression" : {
-				"Type" : "ANY",
+				"Type" : "ALL",
 				"CriteriaList" : [
 					{
 						"Criteria" : {
-							"ProcedureOccurrence" : {
-								"CodesetId" : 46,
-								"ProcedureTypeExclude" : false
-							}
-						},
-						"StartWindow" : {
-							"Start" : {
-								"Days" : 0,
-								"Coeff" : -1
-							},
-							"End" : {
-								"Days" : 0,
-								"Coeff" : 1
-							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : false
-						},
-						"RestrictVisit" : true,
-						"IgnoreObservationPeriod" : false,
-						"Occurrence" : {
-							"Type" : 2,
-							"Count" : 1,
-							"IsDistinct" : false
-						}
-					},
-					{
-						"Criteria" : {
-							"DeviceExposure" : {
-								"CodesetId" : 46,
-								"DeviceTypeExclude" : false
+							"VisitOccurrence" : {
+								"CodesetId" : 47,
+								"VisitTypeExclude" : false
 							}
 						},
 						"StartWindow" : {
@@ -1096,15 +1057,42 @@
 			}
 		},
 		{
-			"name" : "inpatient visit at day 0 (same visit)",
+			"name" : "catherization +/- stent placement at day 0 (same visit)",
 			"expression" : {
-				"Type" : "ALL",
+				"Type" : "ANY",
 				"CriteriaList" : [
 					{
 						"Criteria" : {
-							"VisitOccurrence" : {
-								"CodesetId" : 47,
-								"VisitTypeExclude" : false
+							"ProcedureOccurrence" : {
+								"CodesetId" : 46,
+								"ProcedureTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Days" : 0,
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 0,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : true,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 2,
+							"Count" : 1,
+							"IsDistinct" : false
+						}
+					},
+					{
+						"Criteria" : {
+							"DeviceExposure" : {
+								"CodesetId" : 46,
+								"DeviceTypeExclude" : false
 							}
 						},
 						"StartWindow" : {

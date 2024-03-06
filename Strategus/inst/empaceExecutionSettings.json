@@ -1,7 +1,7 @@
 {
-  "connectionDetailsReference": "OPEN_CLAIMS",
-  "workDatabaseSchema": "PA_USA_OPENCLAIMS.STUDY_REFERENCE",
-  "cdmDatabaseSchema": "EXT_OMOPV5_USA_OPENCLAIMS.FULL_M202311_OMOP_V5",
+  "connectionDetailsReference": "HospitalCDM",
+  "workDatabaseSchema": "STUDY_REFERENCE",
+  "cdmDatabaseSchema": "FULL_202311_OMOP_V5",
   "cohortTableNames": {
     "cohortTable": "STEMI_v2",
     "cohortInclusionTable": "STEMI_v2_inclusion",
@@ -10,13 +10,13 @@
     "cohortSummaryStatsTable": "STEMI_v2_summary_stats",
     "cohortCensorStatsTable": "STEMI_v2_censor_stats"
   },
-  "tempEmulationSchema": "PA_USA_OPENCLAIMS.STUDY_REFERENCE",
-  "workFolder": "/home/INTERNAL.IMSGLOBAL.COM/u1125754/PhenoPhebStemiCharacterization/Strategus/output/work_folder",
-  "resultsFolder": "/home/INTERNAL.IMSGLOBAL.COM/u1125754/PhenoPhebStemiCharacterization/Strategus/output/results_folder",
+  "tempEmulationSchema": "STUDY_REFERENCE",
+  "workFolder": "/mnt/rstudio_data/INTERNAL.IMSGLOBAL.COM/u1125754/PhenoPhebStemiCharacterization/Strategus/outputHospitalCDM/work_folder",
+  "resultsFolder": "/mnt/rstudio_data/INTERNAL.IMSGLOBAL.COM/u1125754/PhenoPhebStemiCharacterization/Strategus/outputHospitalCDM/results_folder",
   "minCellCount": 5,
   "integerAsNumeric": true,
   "integer64AsNumeric": true,
   "resultsConnectionDetailsReference": null,
-  "resultsDatabaseSchema": "PA_USA_OPENCLAIMS.STUDY_REFERENCE",
+  "resultsDatabaseSchema": "STUDY_REFERENCE",
   "attr_class": ["CdmExecutionSettings", "ExecutionSettings"]
 }

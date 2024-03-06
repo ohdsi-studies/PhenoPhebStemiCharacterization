@@ -219,7 +219,7 @@ This will be a retrospective cohort study of patients diagnosed with acute STEMI
 ## Study Population
 The primary study population will consist of adult patients with an acute STEMI diagnosis identified in the data sources. Study cohorts and the corresponding index dates have been defined to address study objectives.
 
-The overall study period will span from January 1, 2016, up to the most recent data available for the given data sources. The end date will vary depending on data sources.
+The overall study period will span from January 1, 2016, up to the most recent data available for the given data sources. 
 
 ## Analysis
 
@@ -227,13 +227,13 @@ Although the primary aim of this study is a characterization study, various stan
 
 ### Data Characterization
 #### Cohort Diagnostics
-The R package CohortDiagnostics will be executed for all target, comparator, indication, and outcome cohorts to evaluate measurement error in the phenotype development and evaluation process.28
+The R package CohortDiagnostics will be executed for all cohorts to evaluate measurement error in the phenotype development and evaluation process.28
 
 ####	Cohort Features
-The Characterization and FeatureExtraction packages in HADES will be used to identify features of patients in each exposure group who had the outcome and those who did not have the outcome.27 Features will be extracted from the 365 day observation prior to cohort entry and will include variables such as demographic data (sex, age group, race, ethnicity), prior conditions/drug exposures/procedures/measurements/devices/observations, and risk scores (e.g., Charlson comorbidity index, DCSI, CHADS2VASC score).
+The Characterization and FeatureExtraction packages in HADES will be used to identify features of patients in the STEMI cohort.27 Features will be extracted from the 365 day observation prior to cohort entry and will include variables such as demographic data (sex, age group, race, ethnicity), prior conditions, drug exposures, procedures, measurements, prior observations, and risk scores (e.g., Charlson comorbidity index, DCSI, CHADS2VASC score).
 
 #### Incidence Rates
-The Characterization package in HADES will be used to calculate the incidence rates of the outcome for each exposure cohort and indication cohort. The rate is calculated as the number of outcomes during the time-at-risk divided by the number of total person days.
+The Characterization package in HADES will be used to calculate the incidence rates of the outcome for the STEMI cohort. The rate is calculated as the number of outcomes during the time-at-risk divided by the number of total person days.
 
 # Strengths and Limitations {#strengths-limitations}
 

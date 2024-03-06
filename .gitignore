@@ -10,3 +10,6 @@ Documents/*.tex
 Documents/*.log
 Documents/*.docx
 Strategus/output/
+Strategus/outputOpenClaims/
+Strategus/outputPMTXMEDTECH/
+Strategus/outputHospitalCDM/
