@@ -1,3 +1,2 @@
 atlas_id,cohort_id,cohort_name,logic_description,generate_stats
-135,135,[OHDSI PhenotypePhebruary] STEMI - def.4 diagSTEMI (with inclusion and exclusion criteria),NA,TRUE
-144,144,[OHDSI PhenotypePhebruary] STEMI - def.5 diagSTEMI (primary) (with inclusion and exclusion criteria),NA,TRUE
+135,135,[OHDSI PhenotypePhebruary] STEMI - def.4 diagSTEMI (with inclusion and exclusion criteria) v1,NA,TRUE

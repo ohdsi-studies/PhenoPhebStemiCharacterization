@@ -1,7 +1,7 @@
 ##=========== START OF INPUTS ==========
 
-connectionDetailsReference <- CDR
-outputLocation <- outputFolder
+connectionDetailsReference <- "HOSPITALCDM"
+outputLocation <- "/mnt/rstudio_data/INTERNAL.IMSGLOBAL.COM/u1125754/PhenoPhebStemiCharacterization/Strategus/outputHOSPITALCDM"
 
 ##=========== END OF INPUTS ==========
 ##################################

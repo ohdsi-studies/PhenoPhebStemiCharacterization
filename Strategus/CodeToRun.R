@@ -8,13 +8,13 @@
 # remotes::install_github("OHDSI/Strategus")
 
 ## User input variables
-CDR <- "OPEN_CLAIMS"                                          # reference for connection details
-workSchema <- Sys.getenv("STUDY_REFERENCE_USA_OPENCLAIMS")                           # Database location to write results during modules
-tempEmulationSchema <- Sys.getenv("STUDY_REFERENCE_USA_OPENCLAIMS")                 # Emulation schema for snowflake, oracle etc. NOT NEEDED ON OTHER DBMS
+CDR <- "HOSPITALCDM"                                          # reference for connection details
+workSchema <- Sys.getenv("STUDY_REFERENCE_USA_HOSPITAL")                           # Database location to write results during modules
+tempEmulationSchema <- Sys.getenv("STUDY_REFERENCE_USA_HOSPITAL")                 # Emulation schema for snowflake, oracle etc. NOT NEEDED ON OTHER DBMS
 resultsSchema <- workSchema                              # Database location to write results for storage on completion
-cdmDatabaseSchema <- Sys.getenv("PA_USA_OPENCLAIMS_SCHEMA")  # Database location for the CDM
+cdmDatabaseSchema <- Sys.getenv("PA_USA_HOSPITAL_SCHEMA")  # Database location for the CDM
 cohortTableName <- "STEMI_v2"
-outputFolder <- file.path(paste0(getwd(),"/Strategus/output"))
+outputFolder <- file.path(paste0(getwd(),"/Strategus/output",CDR))
 
 # If first time using strategus execution, these variables are essential
 Sys.setenv(INSTANTIATED_MODULES_FOLDER="~/StrategusModulesHome") # directory for Strategus modules to be installed
@@ -25,7 +25,7 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(
   "snowflake",
   user = Sys.getenv("NW_SNOWFLAKE_USER"),
   password = Sys.getenv("NW_SNOWFLAKE_PASSWORD"),
-  connectionString = paste0(Sys.getenv("OMOP_PA_SERVER"), Sys.getenv("MEDIUM_USA_OPENCLAIMS"),"&CLIENT_SESSION_KEEP_ALIVE=true"),
+  connectionString = paste0(Sys.getenv("OMOP_PA_SERVER"), Sys.getenv("SMALL_USA_HOSPITAL"),"&CLIENT_SESSION_KEEP_ALIVE=true"),
   pathToDriver = "/home/INTERNAL.IMSGLOBAL.COM/u1125754/drivers"
   )
 

@@ -15,7 +15,7 @@ cohortsToCreate <- createEmptyCohortDefinitionSet()
 baseUrl <- Sys.getenv("ATLAS_WEBAPI")
 
 ### include all cohortIds that you need for your analysis ###
-cohortIds <- c(135,144)
+cohortIds <- c(135)
 
 #link to IQVIA ATLAS Web API using your single-sign on credentials
 ROhdsiWebApi::authorizeWebApi(baseUrl = baseUrl,
