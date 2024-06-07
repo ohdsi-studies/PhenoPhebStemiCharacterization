@@ -1211,7 +1211,7 @@
 			}
 		},
 		{
-			"name" : "echocardio day 0 ",
+			"name" : "echocardio day 0-3",
 			"expression" : {
 				"Type" : "ANY",
 				"CriteriaList" : [
@@ -1228,7 +1228,7 @@
 								"Coeff" : -1
 							},
 							"End" : {
-								"Days" : 0,
+								"Days" : 3,
 								"Coeff" : 1
 							},
 							"UseIndexEnd" : false,
@@ -1255,7 +1255,7 @@
 								"Coeff" : -1
 							},
 							"End" : {
-								"Days" : 0,
+								"Days" : 3,
 								"Coeff" : 1
 							},
 							"UseIndexEnd" : false,
@@ -1281,7 +1281,7 @@
 								"Coeff" : -1
 							},
 							"End" : {
-								"Days" : 0,
+								"Days" : 3,
 								"Coeff" : 1
 							},
 							"UseIndexEnd" : false,

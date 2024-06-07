@@ -25,7 +25,7 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(
   "snowflake",
   user = Sys.getenv("NW_SNOWFLAKE_USER"),
   password = Sys.getenv("NW_SNOWFLAKE_PASSWORD"),
-  connectionString = paste0(Sys.getenv("OMOP_PA_SERVER"), Sys.getenv("SMALL_USA_HOSPITAL"),"&CLIENT_SESSION_KEEP_ALIVE=true"),
+  connectionString = paste0(Sys.getenv("OMOP_PA_SERVER"), Sys.getenv("SMALL_USA_HOSPITAL")),
   pathToDriver = "/home/INTERNAL.IMSGLOBAL.COM/u1125754/drivers"
   )
 
@@ -73,8 +73,9 @@ Strategus::execute(analysisSpecifications = analysisSpecifications,
 
 #Step 1. create app folder in outputFolder
 #If trouble running resuls_compile, please delete the NOT NULL from the source_concept_id in Home/ R/ Workbench/x86.....gnu_library/ 4.2/ CohortDiagnostics/ sql/ sql_server/ createResultsDataModel.sql
-source("Results_compile.R")
+source(paste0(getwd(),"/Strategus/Results_compile.R"))
 
+#move app.R into the app folder inside the results section
 if(launchShiny){
   source("app.R")
 }
