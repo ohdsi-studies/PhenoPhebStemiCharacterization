@@ -8,11 +8,11 @@
 # remotes::install_github("OHDSI/Strategus")
 
 ## User input variables
-CDR <- "HOSPITALCDM"                                          # reference for connection details
-workSchema <- Sys.getenv("STUDY_REFERENCE_USA_HOSPITAL")                           # Database location to write results during modules
-tempEmulationSchema <- Sys.getenv("STUDY_REFERENCE_USA_HOSPITAL")                 # Emulation schema for snowflake, oracle etc. NOT NEEDED ON OTHER DBMS
+CDR <- "MC"                                          # reference for connection details
+workSchema <- Sys.getenv("STUDY_REFERENCE_USA_OPENCLAIMS")                           # Database location to write results during modules
+tempEmulationSchema <- Sys.getenv("STUDY_REFERENCE_USA_OPENCLAIMS")                 # Emulation schema for snowflake, oracle etc. NOT NEEDED ON OTHER DBMS
 resultsSchema <- workSchema                              # Database location to write results for storage on completion
-cdmDatabaseSchema <- Sys.getenv("PA_USA_HOSPITAL_SCHEMA")  # Database location for the CDM
+cdmDatabaseSchema <- Sys.getenv("PA_USA_OPENCLAIMS_SCHEMA")  # Database location for the CDM
 cohortTableName <- "STEMI_v2"
 outputFolder <- file.path(paste0(getwd(),"/Strategus/output",CDR))
 
@@ -25,7 +25,7 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(
   "snowflake",
   user = Sys.getenv("NW_SNOWFLAKE_USER"),
   password = Sys.getenv("NW_SNOWFLAKE_PASSWORD"),
-  connectionString = paste0(Sys.getenv("OMOP_PA_SERVER"), Sys.getenv("SMALL_USA_HOSPITAL")),
+  connectionString = paste0(Sys.getenv("OMOP_PA_SERVER"), Sys.getenv("SMALL_USA_OPENCLAIMS")),
   pathToDriver = "/home/INTERNAL.IMSGLOBAL.COM/u1125754/drivers"
   )
 
@@ -73,6 +73,14 @@ Strategus::execute(analysisSpecifications = analysisSpecifications,
 
 #Step 1. create app folder in outputFolder
 #If trouble running resuls_compile, please delete the NOT NULL from the source_concept_id in Home/ R/ Workbench/x86.....gnu_library/ 4.2/ CohortDiagnostics/ sql/ sql_server/ createResultsDataModel.sql
+subDir <- "app"
+if (file.exists(paste0(outputFolder,subDir))){
+    print("no action taken")
+} else {
+  print("created app folder in outputFolder")
+  dir.create(file.path(outputFolder, subDir))
+}
+
 source(paste0(getwd(),"/Strategus/Results_compile.R"))
 
 #move app.R into the app folder inside the results section
