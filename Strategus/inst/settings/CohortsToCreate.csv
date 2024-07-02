@@ -1,2 +1,4 @@
 atlas_id,cohort_id,cohort_name,logic_description,generate_stats
-135,135,[OHDSI PhenotypePhebruary] STEMI - def.4 diagSTEMI (with inclusion and exclusion criteria) v1,NA,TRUE
+135,135,[OHDSI PhenotypePhebruary] STEMI - def.4 diagSTEMI - 180 days prior history,NA,TRUE
+1707,1707,[OHDSI PhenotypePhebruary] STEMI - def.4 diagSTEMI - (ALL patients) 0 days prior history,NA,TRUE
+1708,1708,[OHDSI PhenotypePhebruary] STEMI - def.4 diagSTEMI - no prior history,NA,TRUE

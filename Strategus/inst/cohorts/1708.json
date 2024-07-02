@@ -14,7 +14,7 @@
 			}
 		],
 		"ObservationWindow" : {
-			"PriorDays" : 180,
+			"PriorDays" : 0,
 			"PostDays" : 0
 		},
 		"PrimaryCriteriaLimit" : {
@@ -1124,6 +1124,41 @@
 		"Type" : "First"
 	},
 	"InclusionRules" : [
+		{
+			"name" : "no visits prior to diagnosis",
+			"expression" : {
+				"Type" : "ALL",
+				"CriteriaList" : [
+					{
+						"Criteria" : {
+							"VisitOccurrence" : {
+								"VisitTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 1,
+								"Coeff" : -1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 0,
+							"Count" : 0,
+							"IsDistinct" : false
+						}
+					}
+				],
+				"DemographicCriteriaList" : [],
+				"Groups" : []
+			}
+		},
 		{
 			"name" : "0 of non-stemi on index date",
 			"expression" : {

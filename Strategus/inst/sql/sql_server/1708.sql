@@ -127,7 +127,7 @@ AND C.ordinal = 1
 
   ) E
 	JOIN @cdm_database_schema.observation_period OP on E.person_id = OP.person_id and E.start_date >=  OP.observation_period_start_date and E.start_date <= op.observation_period_end_date
-  WHERE DATEADD(day,180,OP.OBSERVATION_PERIOD_START_DATE) <= E.START_DATE AND DATEADD(day,0,E.START_DATE) <= OP.OBSERVATION_PERIOD_END_DATE
+  WHERE DATEADD(day,0,OP.OBSERVATION_PERIOD_START_DATE) <= E.START_DATE AND DATEADD(day,0,E.START_DATE) <= OP.OBSERVATION_PERIOD_END_DATE
 ) P
 WHERE P.ordinal = 1
 -- End Primary Events
@@ -141,6 +141,56 @@ WHERE P.ordinal = 1
 
 select 0 as inclusion_rule_id, person_id, event_id
 INTO #Inclusion_0
+FROM 
+(
+  select pe.person_id, pe.event_id
+  FROM #qualified_events pe
+  
+JOIN (
+-- Begin Criteria Group
+select 0 as index_id, person_id, event_id
+FROM
+(
+  select E.person_id, E.event_id 
+  FROM #qualified_events E
+  INNER JOIN
+  (
+    -- Begin Correlated Criteria
+select 0 as index_id, p.person_id, p.event_id
+from #qualified_events p
+LEFT JOIN (
+SELECT p.person_id, p.event_id 
+FROM #qualified_events P
+JOIN (
+  -- Begin Visit Occurrence Criteria
+select C.person_id, C.visit_occurrence_id as event_id, C.start_date, C.end_date,
+       C.visit_occurrence_id, C.start_date as sort_date
+from 
+(
+  select vo.person_id,vo.visit_occurrence_id,vo.visit_concept_id,vo.visit_start_date as start_date, vo.visit_end_date as end_date 
+  FROM @cdm_database_schema.VISIT_OCCURRENCE vo
+
+) C
+
+
+-- End Visit Occurrence Criteria
+
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= DATEADD(day,-1,P.START_DATE) ) cc on p.person_id = cc.person_id and p.event_id = cc.event_id
+GROUP BY p.person_id, p.event_id
+HAVING COUNT(cc.event_id) = 0
+-- End Correlated Criteria
+
+  ) CQ on E.person_id = CQ.person_id and E.event_id = CQ.event_id
+  GROUP BY E.person_id, E.event_id
+  HAVING COUNT(index_id) = 1
+) G
+-- End Criteria Group
+) AC on AC.person_id = pe.person_id AND AC.event_id = pe.event_id
+) Results
+;
+
+select 1 as inclusion_rule_id, person_id, event_id
+INTO #Inclusion_1
 FROM 
 (
   select pe.person_id, pe.event_id
@@ -189,8 +239,8 @@ HAVING COUNT(cc.event_id) = 0
 ) Results
 ;
 
-select 1 as inclusion_rule_id, person_id, event_id
-INTO #Inclusion_1
+select 2 as inclusion_rule_id, person_id, event_id
+INTO #Inclusion_2
 FROM 
 (
   select pe.person_id, pe.event_id
@@ -222,8 +272,8 @@ GROUP BY e.person_id, e.event_id
 ) Results
 ;
 
-select 2 as inclusion_rule_id, person_id, event_id
-INTO #Inclusion_2
+select 3 as inclusion_rule_id, person_id, event_id
+INTO #Inclusion_3
 FROM 
 (
   select pe.person_id, pe.event_id
@@ -270,8 +320,8 @@ HAVING COUNT(cc.event_id) >= 1
 ) Results
 ;
 
-select 3 as inclusion_rule_id, person_id, event_id
-INTO #Inclusion_3
+select 4 as inclusion_rule_id, person_id, event_id
+INTO #Inclusion_4
 FROM 
 (
   select pe.person_id, pe.event_id
@@ -366,8 +416,8 @@ HAVING COUNT(cc.event_id) >= 1
 ) Results
 ;
 
-select 4 as inclusion_rule_id, person_id, event_id
-INTO #Inclusion_4
+select 5 as inclusion_rule_id, person_id, event_id
+INTO #Inclusion_5
 FROM 
 (
   select pe.person_id, pe.event_id
@@ -448,7 +498,9 @@ select inclusion_rule_id, person_id, event_id from #Inclusion_2
 UNION ALL
 select inclusion_rule_id, person_id, event_id from #Inclusion_3
 UNION ALL
-select inclusion_rule_id, person_id, event_id from #Inclusion_4) I;
+select inclusion_rule_id, person_id, event_id from #Inclusion_4
+UNION ALL
+select inclusion_rule_id, person_id, event_id from #Inclusion_5) I;
 TRUNCATE TABLE #Inclusion_0;
 DROP TABLE #Inclusion_0;
 
@@ -464,6 +516,9 @@ DROP TABLE #Inclusion_3;
 TRUNCATE TABLE #Inclusion_4;
 DROP TABLE #Inclusion_4;
 
+TRUNCATE TABLE #Inclusion_5;
+DROP TABLE #Inclusion_5;
+
 
 select event_id, person_id, start_date, end_date, op_start_date, op_end_date
 into #included_events
@@ -478,7 +533,7 @@ FROM (
   ) MG -- matching groups
 
   -- the matching group with all bits set ( POWER(2,# of inclusion rules) - 1 = inclusion_rule_mask
-  WHERE (MG.inclusion_rule_mask = POWER(cast(2 as bigint),5)-1)
+  WHERE (MG.inclusion_rule_mask = POWER(cast(2 as bigint),6)-1)
 
 ) Results
 WHERE Results.ordinal = 1
@@ -567,7 +622,7 @@ delete from @results_database_schema.cohort_censor_stats where cohort_definition
 select cast(rule_sequence as int) as rule_sequence
 into #inclusion_rules
 from (
-  SELECT CAST(0 as int) as rule_sequence UNION ALL SELECT CAST(1 as int) as rule_sequence UNION ALL SELECT CAST(2 as int) as rule_sequence UNION ALL SELECT CAST(3 as int) as rule_sequence UNION ALL SELECT CAST(4 as int) as rule_sequence
+  SELECT CAST(0 as int) as rule_sequence UNION ALL SELECT CAST(1 as int) as rule_sequence UNION ALL SELECT CAST(2 as int) as rule_sequence UNION ALL SELECT CAST(3 as int) as rule_sequence UNION ALL SELECT CAST(4 as int) as rule_sequence UNION ALL SELECT CAST(5 as int) as rule_sequence
 ) IR;
 
 
