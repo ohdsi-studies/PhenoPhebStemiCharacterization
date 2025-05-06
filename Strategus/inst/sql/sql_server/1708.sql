@@ -92,6 +92,28 @@ UNION  select c.concept_id
   and c.invalid_reason is null
 
 ) I
+) C UNION ALL 
+SELECT 51 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4059699,709890,4292071,4230911,2313879,2313880,4060628,4305721,2313881,4252226,42628042,4163951,4222104)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4059699,709890,4292071,4230911,2313879,2313880,4060628,4305721,2313881,4252226,42628042,4163951,4222104)
+  and c.invalid_reason is null
+
+) I
+LEFT JOIN
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (759555,45773079,759555,45773079)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (759555,45773079,759555,45773079)
+  and c.invalid_reason is null
+
+) E ON I.concept_id = E.concept_id
+WHERE E.concept_id is null
 ) C;
 
 UPDATE STATISTICS #Codesets;
@@ -348,7 +370,7 @@ from
 (
   select po.person_id,po.procedure_occurrence_id,po.procedure_concept_id,po.visit_occurrence_id,po.quantity,po.procedure_date as start_date, DATEADD(day,1,po.procedure_date) as end_date 
   FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
-JOIN #Codesets cs on (po.procedure_concept_id = cs.concept_id and cs.codeset_id = 48)
+JOIN #Codesets cs on (po.procedure_concept_id = cs.concept_id and cs.codeset_id = 51)
 ) C
 
 
@@ -372,7 +394,7 @@ from
 (
   select o.person_id,o.observation_id,o.observation_concept_id,o.visit_occurrence_id,o.value_as_number,o.observation_date as start_date, DATEADD(day,1,o.observation_date) as end_date 
   FROM @cdm_database_schema.OBSERVATION o
-JOIN #Codesets cs on (o.observation_concept_id = cs.concept_id and cs.codeset_id = 48)
+JOIN #Codesets cs on (o.observation_concept_id = cs.concept_id and cs.codeset_id = 51)
 ) C
 
 
@@ -396,7 +418,7 @@ FROM
 (
   SELECT co.person_id,co.condition_occurrence_id,co.condition_concept_id,co.visit_occurrence_id,co.condition_start_date as start_date, COALESCE(co.condition_end_date, DATEADD(day,1,co.condition_start_date)) as end_date 
   FROM @cdm_database_schema.CONDITION_OCCURRENCE co
-  JOIN #Codesets cs on (co.condition_concept_id = cs.concept_id and cs.codeset_id = 48)
+  JOIN #Codesets cs on (co.condition_concept_id = cs.concept_id and cs.codeset_id = 51)
 ) C
 
 

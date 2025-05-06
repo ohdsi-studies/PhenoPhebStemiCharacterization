@@ -20,8 +20,8 @@ cohortIds <- c(135,1707,1708)
 #link to IQVIA ATLAS Web API using your single-sign on credentials
 ROhdsiWebApi::authorizeWebApi(baseUrl = baseUrl,
                               authMethod = "ad",
-                              webApiUsername = Sys.getenv("NW_USER"),
-                              webApiPassword = Sys.getenv("NW_PASS"))
+                              webApiUsername = Sys.getenv("ATLAS_USER"),
+                              webApiPassword = Sys.getenv("ATLAS_PW"))
 
 
 # check we have the cohorts specified

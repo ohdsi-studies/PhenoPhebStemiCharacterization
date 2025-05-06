@@ -1,18 +1,18 @@
 # Package synchronization, run once and not again
 # install.packages("keyring")
-# remotes::install_github("ohdsi/ShinyAppBuilder")
-# remotes::install_github("ohdsi/OhdsiShinyModules")
-# remotes::install_github("ohdsi/ResultModelManager")
-# remotes::install_github("ohdsi/CohortGenerator")
-# remotes::install_github("ohdsi/CohortDiagnostics")
-# remotes::install_github("OHDSI/Strategus")
+#remotes::install_github("ohdsi/ShinyAppBuilder")  #v2.0.1
+#remotes::install_github("ohdsi/OhdsiShinyModules") #v2.1.2
+#remotes::install_github("ohdsi/ResultModelManager") #v0.5.8
+#remotes::install_github("ohdsi/CohortGenerator") #v0.11.1
+#remotes::install_github("ohdsi/CohortDiagnostics") #v3.2.5
+#remotes::install_github("OHDSI/Strategus") #v0.2.1
 
 ## User input variables
-CDR <- "MC"                                          # reference for connection details
-workSchema <- Sys.getenv("STUDY_REFERENCE_USA_OPENCLAIMS")                           # Database location to write results during modules
-tempEmulationSchema <- Sys.getenv("STUDY_REFERENCE_USA_OPENCLAIMS")                 # Emulation schema for snowflake, oracle etc. NOT NEEDED ON OTHER DBMS
+CDR <- "SEV"                                          # reference for connection details
+workSchema <- Sys.getenv("STUDY_REFERENCE_USA_PMTX_X_AMBEMR")                           # Database location to write results during modules
+tempEmulationSchema <- Sys.getenv("STUDY_REFERENCE_USA_PMTX_X_AMBEMR")                 # Emulation schema for snowflake, oracle etc. NOT NEEDED ON OTHER DBMS
 resultsSchema <- workSchema                              # Database location to write results for storage on completion
-cdmDatabaseSchema <- Sys.getenv("PA_USA_OPENCLAIMS_SCHEMA")  # Database location for the CDM
+cdmDatabaseSchema <- Sys.getenv("PA_USA_PMTX_X_AMBEMR_SCHEMA")  # Database location for the CDM
 cohortTableName <- "STEMI_v2"
 outputFolder <- file.path(paste0(getwd(),"/Strategus/output",CDR))
 
@@ -23,8 +23,8 @@ Sys.setenv(STRATEGUS_KEYRING_PASSWORD="Strategus")                  # Password f
 # Create connection details in usual manner
 connectionDetails <- DatabaseConnector::createConnectionDetails(
   "snowflake",
-  user = Sys.getenv("NW_SNOWFLAKE_USER"),
-  password = Sys.getenv("NW_SNOWFLAKE_PASSWORD"),
+  user = Sys.getenv("SNOWFLAKE_USER"),
+  password = Sys.getenv("SNOWFLAKE_PASSWORD"),
   connectionString = paste0(Sys.getenv("OMOP_PA_SERVER"), Sys.getenv("SMALL_USA_OPENCLAIMS")),
   pathToDriver = "/home/INTERNAL.IMSGLOBAL.COM/u1125754/drivers"
   )
